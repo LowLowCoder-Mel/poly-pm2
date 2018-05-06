@@ -8,7 +8,7 @@ module.exports = {
     // First application
     {
       name      : 'grpc',
-      script    : 'pm2 start server.js --name grpc --watch',
+      script    : ' /usr/local/Cellar/node/9.9.0/bin/pm2 start server.js --name grpc --watch',
       env: {
         COMMON_VARIABLE: 'true'
       },
