@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package remote;
+
+// 遥看设备服务
+service YKRemoteService {
+  // 激活用户设备
+  rpc ActiveDevice (UserInfo) returns (CodeMsg) {}
+  // 重新激活用户设备
+  rpc ReActiveDevice (UserInfo) returns (CodeMsg) {}
+  // 查询设备设备状态
+  rpc GetOnline (DeviceInfo) returns (CodeMsg) {}
+  // 添加遥控任务
+  rpc AddRemoteTask (CommandInfo) returns (CodeMsg) {}
+}
+
+message UserInfo {
+  string f = 1;
+  string username = 2;
+  string password = 3;
+  int32 accounttype = 4;
+}
+
+message DeviceInfo {
+  string f = 1;
+}
+
+message CommandInfo {
+  string f = 1;
+  int32 zip = 2;
+  int32 ir_device_type = 3;
+  int32 rc_command_type = 4;
+  string rc_command = 5;
+}
+
+message CodeMsg {
+  int32 code = 1;
+  string message = 2;
+}
