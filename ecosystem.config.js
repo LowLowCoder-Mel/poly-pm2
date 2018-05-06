@@ -7,8 +7,8 @@ module.exports = {
 
     // First application
     {
-      name      : 'poly_pm2',
-      script    : 'node server.js',
+      name      : 'grpc',
+      script    : 'pm2 start server.js --name grpc --watch',
       env: {
         COMMON_VARIABLE: 'true'
       },
