@@ -27,7 +27,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:zhang6321615/poly-pm2.git',
       path : '/home/live/poly_pm2/',
-      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production --watch'
     }
   }
 };
