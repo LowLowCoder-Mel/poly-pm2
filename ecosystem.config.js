@@ -4,7 +4,7 @@ module.exports = {
    */
   apps : [
 
-    // First application
+    // gRPC application
     {
       name      : 'grpc',
       script    : 'server.js',
