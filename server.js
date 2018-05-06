@@ -17,9 +17,9 @@ function main() {
                       GetOnline: yk_rpc_services.GetOnline, 
                       AddRemoteTask: yk_rpc_services.AddRemoteTask});
 
-  server.bind('0.0.0.0:50051', grpc.ServerCredentials.createInsecure());
+  server.bind('0.0.0.0:50052', grpc.ServerCredentials.createInsecure());
   server.start();
-  console.log("Rpc Server Listen On 50051");
+  console.log("Rpc Server Listen On 50052");
 }
 
 main();
